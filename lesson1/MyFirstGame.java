@@ -24,9 +24,6 @@ class MyFirsGame {
 				System.out.println("Вы угадали число");
 				isBool = false;
 			}
-
 		}
-
 	}
-
 }

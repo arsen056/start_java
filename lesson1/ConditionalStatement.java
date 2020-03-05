@@ -5,9 +5,7 @@ class ConditionalStatement {
 		int age = 25;
 		char pol = 'm';
 		double weight = 1.90;
-
 		char pervBukvaImeni = 'M';
-
 
 		if (age > 20) {
 			System.out.println("Ваш возраст больше 20");
@@ -38,11 +36,7 @@ class ConditionalStatement {
 		else {
 			System.out.println("Первая буква имени "+ pervBukvaImeni);
 
-		}
-
-
-
-
+		}		
 	}
 
 }

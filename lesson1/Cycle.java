@@ -5,8 +5,7 @@ class Cycle {
 		for (int i = 0; i <= 20; i++) {
 
 			System.out.println(i);
-		}
-		
+		}		
 		System.out.println();		
 		//Выведите на консоль с помощью цикла while все числа от [6, -6] (шаг итерации равен 2)
 		boolean b = true;
@@ -18,8 +17,7 @@ class Cycle {
 			if (c == -6) {
 				b = false;
 			}
-
-		}
+		}		
 		System.out.println();
 		//Сумма нечетных чисел от 10 до 20
 		int a=11;
@@ -30,6 +28,7 @@ class Cycle {
 			g = g + a;
 
 		} 
+		
 		while(a<19);
 		System.out.println(g);
 	}

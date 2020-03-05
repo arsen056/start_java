@@ -18,5 +18,4 @@ class Variable {
 		System.out.println("symbol:" + symbol);
 		System.out.println("boolean:" + isTrue);
 		}	
-
 }
