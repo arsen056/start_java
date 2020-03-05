@@ -27,7 +27,7 @@ class Cycle {
 		 
 		do {
 			a+=2;
-			g = g+a;
+			g = g + a;
 
 		} 
 		while(a<19);
