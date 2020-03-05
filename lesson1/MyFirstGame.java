@@ -1,7 +1,7 @@
 
 import java.util.*;
 
-class MyFirsGame {
+class MyFirstGame {
 	public static void main(String[] args) {
 		int a =(int) (Math.random()*100);
 		Scanner scanner = new Scanner(System.in);
