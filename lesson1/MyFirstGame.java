@@ -9,8 +9,7 @@ class MyFirsGame {
 		boolean bool = true;
 		System.out.println("загаданное число " + a);
 		System.out.println("Введите число");
-
-		 while(bool) {
+		while(bool) {
 			int number_user = scanner.nextInt();
 
 			if (number_user>a){

@@ -31,7 +31,7 @@ class Calculator {
 			}
 			
 			int res = 1;
-			for (int c=1; c<=b; c++){
+			for (int c = 1; c <= b; c++){
 				res*=a;				
 			}
 
