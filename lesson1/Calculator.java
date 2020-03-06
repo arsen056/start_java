@@ -2,40 +2,26 @@ class Calculator {
 	public static void main(String[] args) {
 		double a = 2;
 		double b = 6;
+		char mathematicalOperation = '^';
 
-		char znak = '^';
-
-		if (znak == '+') {
+		if (mathematicalOperation == '+') {
 			System.out.println(a+b);
 		}
-
-		else if (znak == '-') {
+		else if (mathematicalOperation == '-') {
 			System.out.println(a-b);
-		}
-
-		else if (znak == '/') {
+		} else if (mathematicalOperation == '/') {
 			System.out.println(a/b);
-		}
-
-		else if (znak == '*') {
+		} else if (mathematicalOperation == '*') {
 			System.out.println(a*b);
-		}
-
-		else if (znak == '%') {
+		} else if (mathematicalOperation == '%') {
 			System.out.println(a%b);
-		}
-
-		else if (znak == '^') {
-			if (b==0){
-				System.out.println(1);
-			}
-			
+		} else if (mathematicalOperation == '^') {				
 			int res = 1;
-			for (int c = 1; c <= b; c++){
-				res*=a;				
+			for (int i = 1; i <= b; i++){
+				res *= a;				
 			}
 
-			System.out.println(res*=1);
+			System.out.println(res);
 		}
 	}
 }

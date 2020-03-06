@@ -7,15 +7,15 @@ class Variable {
 		float cpuFrequency = 2.30f;
 		double weight = 1.5;
 		char symbol = 'A';
-		boolean isTrue = true;
+		boolean isBool = true;
 			
-		System.out.println("core:" + core);
-		System.out.println("price:" + price);
-		System.out.println("size:" + size);
-		System.out.println("Razryadnost:" + systemCapacity);
-		System.out.println("chastota:" + cpu_Frequency);
-		System.out.println("weight:" + weight);
-		System.out.println("symbol:" + symbol);
-		System.out.println("boolean:" + isTrue);
-		}	
+		System.out.println("core: " + core);
+		System.out.println("price: " + price);
+		System.out.println("size: " + size);
+		System.out.println("System capacity: " + systemCapacity);
+		System.out.println("Cpu frequency:" + cpuFrequency);
+		System.out.println("weight: " + weight);
+		System.out.println("symbol: " + symbol);
+		System.out.println("boolean: " + isBool);
+	}	
 }
