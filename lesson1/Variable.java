@@ -7,7 +7,7 @@ class Variable {
 		float cpuFrequency = 2.30f;
 		double weight = 1.5;
 		char symbol = 'A';
-		boolean isBool = true;
+		boolean isLenovo = true;
 			
 		System.out.println("core: " + core);
 		System.out.println("price: " + price);
@@ -16,6 +16,6 @@ class Variable {
 		System.out.println("Cpu frequency:" + cpuFrequency);
 		System.out.println("weight: " + weight);
 		System.out.println("symbol: " + symbol);
-		System.out.println("boolean: " + isBool);
+		System.out.println("is Lenovo: " + isLenovo);
 	}	
 }
