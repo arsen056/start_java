@@ -5,15 +5,15 @@ class Calculator {
 		char mathOperation = '^';
 
 		if (mathOperation == '+') {
-			System.out.println(a+b);
+			System.out.println(a + b);
 		} else if (mathOperation == '-') {
-			System.out.println(a-b);
+			System.out.println(a - b);
 		} else if (mathOperation == '/') {
-			System.out.println(a/b);
+			System.out.println(a / b);
 		} else if (mathOperation == '*') {
-			System.out.println(a*b);
+			System.out.println(a * b);
 		} else if (mathOperation == '%') {
-			System.out.println(a%b);
+			System.out.println( a % b);
 		} else if (mathOperation == '^') {				
 			int res = 1;
 			for (int i = 1; i <= b; i++){

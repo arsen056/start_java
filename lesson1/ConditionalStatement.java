@@ -1,42 +1,28 @@
-
 class ConditionalStatement {
-
-	public static void main(String[] args) {
+	public static void main(String[] args) {		
 		int age = 25;
-		char pol = 'm';
-		double weight = 1.90;
-		char pervBukvaImeni = 'M';
-
 		if (age > 20) {
 			System.out.println("Ваш возраст больше 20");
-		}
-
-		if (pol == 'm') {
+		}		
+		boolean isMale  = true;
+		if (isMale == true) {
 			System.out.println("Пол мужской");
-		}
-
-		if (pol != 'm') {
+		} else if (isMale == false) {
 			System.out.println("Пол не мужской");
 		}
-
+		double weight = 1.90;
 		if (weight < 1.80) {
 			System.out.println("Пол мужской");
-		}
-		else {
+		} else {
 			System.out.println("Рост больше 1.80");
-
 		}
-
-		if (pervBukvaImeni == 'M') {
+		char firstSymbName = 'M';
+		if (firstSymbName == 'M') {
 			System.out.println("Первая буква М");
-		}
-		else if (pervBukvaImeni == 'I') {
+		} else if (firstSymbName == 'I') {
 			System.out.println("Первая буква I");
-		}
-		else {
-			System.out.println("Первая буква имени "+ pervBukvaImeni);
-
+		} else {
+			System.out.println("Первая буква имени "+ firstSymbName);
 		}		
 	}
-
 }
