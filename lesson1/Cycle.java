@@ -18,7 +18,7 @@ class Cycle {
 		do {
 			rangeNum++;
 			if (rangeNum % 2 != 0) {			
-				sumOdd = sumOdd + rangeNum;				
+				sumOdd += rangeNum;				
 			}
 		} while(rangeNum < 20);
 		System.out.println(sumOdd);
