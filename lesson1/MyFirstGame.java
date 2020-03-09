@@ -3,18 +3,18 @@ import java.util.*;
 class MyFirstGame {
 	public static void main(String[] args) {		
 		Scanner scanner = new Scanner(System.in);
-		int randNumb =(int) (Math.random()*100);		
-		System.out.println("загаданное число " + randNumb);
+		int randNum =(int) (Math.random() * 101);		
+		System.out.println("загаданное число " + randNum);
 		System.out.println("Введите число");
-		int numberUser;		
+		int userNum;		
 		do {
-			numberUser = scanner.nextInt();
-			if (numberUser > randNumb) {
+			userNum = scanner.nextInt();
+			if (userNum > randNum) {
 				System.out.println("Повторите попытку, ваше число больше загаданного числа");
-			} else if (numberUser < randNumb) {
+			} else if (userNum < randNum) {
 				System.out.println("Повторите попытку, ваше число меньше загаданного числа");
 			} 
-		} while (numberUser != randNumb);
+		} while (userNum != randNum);
 		System.out.println("Вы угадали число");
 	}
 }

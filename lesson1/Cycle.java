@@ -5,22 +5,22 @@ class Cycle {
 			System.out.println(i);
 		}		
 		System.out.println();
-		//Выведите на консоль с помощью цикла while все числа от [6, -6] (шаг итерации равен 2)
+	
 		int counter = 6;
 		while (counter != -8) {
 			System.out.println(counter);
 			counter -= 2;	
 		}		
 		System.out.println();
-		//Сумма нечетных чисел от 10 до 20
-		int rangeNumb = 10;
+		
+		int rangeNum = 10;
 		int sumOdd = 0;	 
 		do {
-			rangeNumb++;
-			if (rangeNumb % 2 != 0) {			
-				sumOdd = sumOdd + rangeNumb;
+			rangeNum++;
+			if (rangeNum % 2 != 0) {			
+				sumOdd = sumOdd + rangeNum;				
 			}
-		} while(rangeNumb < 20);
+		} while(rangeNum < 20);
 		System.out.println(sumOdd);
 	}
 }
