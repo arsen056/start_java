@@ -7,7 +7,7 @@ class Player {
 		this.number = number;
 	}
 
-	String name_user (Player pl){
+	String name_user (Player pl) {
 		return name = pl.name;		
 	}	
 }
