@@ -1,9 +1,38 @@
 class Wolf {
-	String gender = "male";
-	String nickname = "Khabib";
-	double weight = 8.0;
-	int age = 5;
-	String color = "red";
+	private String gender;
+	private String nickname;
+	private double weight;
+	private int age;
+	private String color = "red";
+
+	public String setGender (String gender) {
+		return gender = gender;
+	}
+
+	public String setNickname (String nickname) {
+		return nickname = nickname;
+	}
+
+	public double setWeight (double weight) {
+		return weight = weight;
+	}
+
+	public void setAge (int age2) {
+		if (age2 > 8) {
+			System.out.println("Некоректный возраст");
+		} else {
+			age = age2;
+			System.out.println("Возраст: " + age);
+		}
+	}
+
+	public String setColor (String color) {	
+		return color = color;
+	}
+
+	public String getColor() {
+		return color;
+	}
 
 	public void go () {
 		System.out.println("Волк идет");
