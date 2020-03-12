@@ -1,37 +1,67 @@
 import java.util.*;
-class GuessNumber {
-	void guessNum () {
-		Scanner scanner = new Scanner(System.in);
-		System.out.println("Введите имя первого пользователя");
-		String name1 = scanner.nextLine();
-		Player player1 = new Player(name1, 0);
 
-		System.out.println("Введите имя второго пользователя");
-		String name2 = scanner.nextLine();
-		Player player2 = new Player(name2, 0);
+class GuessNumber {
+	public void startGame(Player pl1, Player pl2) {
+		Scanner scanner = new Scanner(System.in);		
+		int randNum = (int) (Math.random()*101);
+		System.out.println("игра началась! загаданное число " + randNum);		
+		System.out.println(pl1.setName(pl1) + " введите число");			
+		String proceed;
+		int playerNum1 = -1;
+		int playerNum2 = -1;
 		
-		int randNum = (int) (Math.random()*101);		
-		System.out.println("загаданное число " + randNum);
-		System.out.println(player1.name_user(player1) + " введите число");		
-		do {
-			player1.number = scanner.nextInt();
-			if (player1.number > randNum) {
-				System.out.println("Ваше число больше загаданного числа, повторите попытку, сейчас очередь " + player2.name_user(player2));
-			} else if (player1.number < randNum) {
-				System.out.println("Ваше число меньше загаданного числа, повторите попытку позже, сейчас очередь " + player2.name_user(player2));
-			} else if (player1.number == randNum) {
-				System.out.println(player1.name_user(player1) + " угадал число");
-				break;
+		OUTER:
+		while(true) {
+			if (playerNum1 == randNum || playerNum2 == randNum) {
+				randNum = (int) (Math.random()*101);
+				System.out.println("игра началась! загаданное число " + randNum);
 			}
-			player2.number = scanner.nextInt();
-			if (player2.number > randNum) {
-				System.out.println("Ваше число больше загаданного числа, повторите попытку, сейчас очередь " + player1.name_user(player1));
-			} else if (player2.number < randNum) {
-				System.out.println("Ваше число меньше загаданного числа, повторите попытку позже, сейчас очередь " + player1.name_user(player1));
-			} else if (player2.number == randNum) {
-				System.out.println(player2.name_user(player2) + " угадал число");
-				break;
+
+			playerNum1 = pl1.setNumUser(scanner.nextInt());
+			if (playerNum1 > randNum) {
+				System.out.println("Ваше число больше загаданного числа, повторите попытку, сейчас очередь " + pl2.setName(pl2));
+			} else if (playerNum1 < randNum) {
+				System.out.println("Ваше число меньше загаданного числа, повторите попытку позже, сейчас очередь " + pl2.setName(pl2));
+			} else if (playerNum1 == randNum) {
+				System.out.println(pl1.setName(pl1) + " угадал число");
+				scanner.nextLine();
+				System.out.println("Вы хотите продолжить? [да/нет]");							
+				do {
+					proceed = scanner.nextLine();
+					switch (proceed) {
+						case "нет":				
+							break OUTER;
+						case "да":
+							System.out.println(pl1.setName(pl1) + " введите число");
+							continue OUTER;
+						default:							
+							System.out.println("Введите ответ еще раз");					
+					}
+				} while (proceed != "нет" && proceed != "да");				
 			}
-		} while(player1.number != randNum && player2.number != randNum);		
+
+			playerNum2 = pl2.setNumUser(scanner.nextInt());
+			if (playerNum2 > randNum) {
+				System.out.println("Ваше число больше загаданного числа, повторите попытку, сейчас очередь " + pl1.setName(pl1));
+			} else if (playerNum2 < randNum) {
+				System.out.println("Ваше число меньше загаданного числа, повторите попытку позже, сейчас очередь " + pl1.setName(pl1));
+			} else if (playerNum2 == randNum) {
+				System.out.println(pl2.setName(pl2) + " угадал число");
+				System.out.println("Вы хотите продолжить? [да/нет]");
+				scanner.nextLine();							
+				do {
+					proceed = scanner.nextLine();
+					switch (proceed) {
+						case "нет":				
+							break OUTER;
+						case "да":
+							System.out.println(pl1.setName(pl1) + " введите число");
+							continue OUTER;
+						default:							
+							System.out.println("Введите ответ еще раз");					
+					}
+				} while (proceed != "нет" && proceed != "да");				
+			}						
+		} 		
 	}
 }

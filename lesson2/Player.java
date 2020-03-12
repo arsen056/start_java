@@ -1,13 +1,16 @@
 class Player {
 	private String name;
-	int number;
+	private int number;
 	
-	Player (String name, int number) {
-		this.name = name;
-		this.number = number;
+	Player(String name) {
+		this.name = name;		
 	}
 
-	String name_user (Player pl) {
+	String setName(Player pl) {
 		return name = pl.name;		
-	}	
+	}
+
+	int	setNumUser(int number) {
+		return number = number;
+	}
 }

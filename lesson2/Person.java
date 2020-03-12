@@ -4,23 +4,23 @@ class Person {
 	private double height = 1.80;
 	private int age = 22;
 
-	void go () {
+	void go() {
 		System.out.println("Человек идет");
 	}
 
-	void sit () {
+	void sit() {
 		System.out.println("Человек сидит");
 	}
 
-	void run () {
+	void run() {
 		System.out.println("Человек бежит");
 	}
 
-	void speak () {
+	void speak() {
 		System.out.println("Человек говорит");
 	}
 
-	void learnJava () {
+	void learnJava() {
 		System.out.println("Человек учит Java");
 	}
 }
