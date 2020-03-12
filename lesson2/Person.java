@@ -1,8 +1,8 @@
 class Person {
-	String gender = "male";
-	String name = "Arsen";
-	double height = 1.80;
-	int age = 22;
+	private String gender = "male";
+	private String name = "Arsen";
+	private double height = 1.80;
+	private int age = 22;
 
 	void go () {
 		System.out.println("Человек идет");
