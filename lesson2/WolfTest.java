@@ -12,7 +12,7 @@ class WolfTest {
 		wolf1.howls();
 		wolf1.hunt();
 
-		wolf1.setGender("male")	;	
+		wolf1.setGender("male");	
 		System.out.println("Пол: " + wolf1.getGender());
 
 		wolf1.setNickname("Khabib");

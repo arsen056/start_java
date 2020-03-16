@@ -14,7 +14,7 @@ class Player {
 		this.number = number;
 	}
 
-	public int getNum(){
+	public int getNum() {
 		return number;
 	}
 }
