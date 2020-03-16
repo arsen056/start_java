@@ -5,7 +5,7 @@ public class Jaeger {
 	private double weight;
 	private double height;
 	
-	Jaeger (String modelName, String mark, String origin, double weight, double height) {
+	Jaeger(String modelName, String mark, String origin, double weight, double height) {
 		this.modelName = modelName;
 		this.mark = mark;
 		this.origin = origin;
@@ -13,16 +13,12 @@ public class Jaeger {
 		this.height = height;
 	}
 
-	Jaeger (String modelName, String mark, double weight, double height) {
+	Jaeger(String modelName, String mark, double weight, double height) {
 		this.modelName = modelName;
 		this.mark = mark;
 		this.origin = null;
 		this.weight = weight;
 		this.height = height;
-	}
-
-	Jaeger (){
-
 	}
 
 	public void getJaeger(Jaeger j1) {
@@ -33,25 +29,26 @@ public class Jaeger {
 		}
 		System.out.println("Weight : " + j1.weight);
 		System.out.println("height : " + j1.height);
+		System.out.println();
 	}	
 	
-	String setModelName(String modelName) {
-		return modelName = modelName;
+	String getModelName() {
+		return modelName;
 	}
 
-	String setMark(String mark) {
-		return mark = mark;
+	String getMark() {
+		return mark;
 	}
 
-	String setOrigin(String origin) {
-		return origin = origin;
+	String getOrigin() {
+		return origin;
 	}
 
-	double setWeight(double weight) {
-		return weight = weight;
+	double getWeight() {
+		return weight;
 	}
 
-	double setHeight(double height) {
-		return height = height;
+	double getHeight() {
+		return height;
 	}	
 }

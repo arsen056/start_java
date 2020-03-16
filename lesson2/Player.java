@@ -6,11 +6,15 @@ class Player {
 		this.name = name;		
 	}
 
-	String setName(Player pl) {
-		return name = pl.name;		
+	public String getName() {
+		return name;		
 	}
 
-	int	setNumUser(int number) {
-		return number = number;
+	public void setNumUser(int number) {
+		this.number = number;
+	}
+
+	public int getNum(){
+		return number;
 	}
 }
