@@ -1,6 +1,6 @@
 class JaegerTest {
-	public static void main(String[] args) {
-			
+	
+	public static void main(String[] args) {			
 		// Реализация чере конструкторы			
 		Jaeger gipsyAvenger = new Jaeger("Gipsy Avenger", "Mark-6", 2.004, 81);
 		gipsyAvenger.getJaeger(gipsyAvenger);

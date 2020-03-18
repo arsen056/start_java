@@ -2,8 +2,8 @@ import java.util.Scanner;
 
 class CalculatorTest {
 	public static void main(String[] args) {
-		String proceed;
-		boolean isContinue = true;
+		String next;
+		boolean isContinue;
 		Scanner scanner = new Scanner (System.in);
 		Calculator calc = new Calculator();
 		
@@ -20,18 +20,21 @@ class CalculatorTest {
 			System.out.println("Вы хотите продолжить? [да/нет]");
 			scanner.nextLine();							
 			do {
-				proceed = scanner.nextLine();
-				switch (proceed) {
+				next = scanner.nextLine();
+				switch (next) {
 					case "нет":
-						isContinue = false;				
+						System.out.println("игра закончена");
+						isContinue = false;									
 						break;
 					case "да":
 						System.out.println("введите число");
-						continue;
+						isContinue = false;
+						break;
 					default:							
-						System.out.println("Введите ответ еще раз");					
+						System.out.println("Введите ответ еще раз");
+						isContinue = true;															
 				}
-			} while (proceed.equals("нет") == false && proceed.equals("да") == false);	
-		} while(isContinue);
+			} while (isContinue);	
+		} while (next.equals("да"));
 	}
 }

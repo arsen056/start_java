@@ -1,6 +1,6 @@
 class Calculator {
-	public void сalculate(double firstNum, char mathOperation, double secondNum) {			
-						
+
+	public void сalculate(double firstNum, char mathOperation, double secondNum) {						
 		switch (mathOperation) {
 			case '-':
 				System.out.println("Ответ: " + (firstNum - secondNum));
