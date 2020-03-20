@@ -2,8 +2,7 @@ import java.util.Scanner;
 
 class GuessNumberTest {
 	public static void main(String[] args) {
-		Scanner scanner = new Scanner(System.in);
-		String name1, name2;
+		Scanner scanner = new Scanner(System.in);		
 		String next;
 		boolean isContinue;	
 
@@ -15,10 +14,9 @@ class GuessNumberTest {
 			Player player2 = new Player(scanner.nextLine());
 
 			GuessNumber guessNum = new GuessNumber(player1, player2);
-			guessNum.guessNumber(player1, player2);
+			guessNum.guessNumber();
 			
-			System.out.println("Хотите продолжить?");			
-
+			System.out.println("Хотите продолжить?");
 			do {
 				next = scanner.nextLine();
 				switch (next) {
