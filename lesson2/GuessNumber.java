@@ -13,18 +13,12 @@ class GuessNumber {
 		int randNum = (int) (Math.random() * 101);
 		System.out.println("игра началась! загаданное число " + randNum);		
 		System.out.println(pl1.getName() + " введите число");		
-		int playerNum1 = -1;
-		int playerNum2 = -1;
+		int playerNum1, playerNum2;		
 		Scanner scanner = new Scanner(System.in);
 
 		do {
-			if (playerNum1 == randNum || playerNum2 == randNum) {
-				randNum = (int) (Math.random() * 101);
-				System.out.println("игра началась! загаданное число " + randNum);
-			}
-
-			pl1.setNumUser(scanner.nextInt());
-			playerNum1 = pl1.getNum();
+			pl1.setNumber(scanner.nextInt());
+			playerNum1 = pl1.getNumber();
 			if (playerNum1 > randNum) {
 				System.out.println("Ваше число больше загаданного числа \n\n" + pl2.getName() + " введите число");
 			} else if (playerNum1 < randNum) {
@@ -34,8 +28,8 @@ class GuessNumber {
 				break;		
 			}
 
-			pl2.setNumUser(scanner.nextInt());
-			playerNum2 = pl2.getNum();
+			pl2.setNumber(scanner.nextInt());
+			playerNum2 = pl2.getNumber();
 			if (playerNum2 > randNum) {
 				System.out.println("Ваше число больше загаданного числа \n\n" + pl1.getName() + " введите число");
 			} else if (playerNum2 < randNum) {
