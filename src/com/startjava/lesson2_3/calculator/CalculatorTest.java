@@ -4,23 +4,19 @@ import java.util.Scanner;
 
 class CalculatorTest {
 	public static void main(String[] args) {
-		String next;
+		String next, mathExpression;
 		boolean isContinue;
 		Scanner scanner = new Scanner (System.in);
 		Calculator calc = new Calculator();
 		
 		do {
-			System.out.println("Введите первое число");
-			double firstNum = scanner.nextDouble();
-			System.out.println("Введите знак математ. операции");
-			char mathOperation = scanner.next().charAt(0);
-			System.out.println("Введите второе число");
-			double secondNum = scanner.nextDouble();
+			System.out.println("Введите математическое выражение");
+			mathExpression = scanner.nextLine();
 
-			calc.сalculate(firstNum, mathOperation, secondNum);
+			calc.сalculate(mathExpression);
 
 			System.out.println("Вы хотите продолжить? [да/нет]");
-			scanner.nextLine();							
+
 			do {
 				next = scanner.nextLine();
 				switch (next) {

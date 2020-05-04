@@ -1,5 +1,5 @@
 package com.startjava.lesson2_3.game;
-
+import java.util.Arrays;
 import java.util.Scanner;
 
 class GuessNumberTest {
@@ -10,16 +10,18 @@ class GuessNumberTest {
 		boolean isContinue;	
 
 		do {
-			System.out.println("Введите имя первого пользователя");			
-			Player player1 = new Player(scanner.nextLine());			
+			System.out.println("Введите имя первого пользователя");
+			Player player1 = new Player(scanner.nextLine());
+			player1.fill(0);
 
 			System.out.println("Введите имя второго пользователя");				
 			Player player2 = new Player(scanner.nextLine());
+			player2.fill(0);
 
 			GuessNumber guessNum = new GuessNumber(player1, player2);
 			guessNum.guessNumber();
 			
-			System.out.println("Хотите продолжить?");
+			System.out.println("\n Хотите продолжить?");
 			do {
 				next = scanner.nextLine();
 				switch (next) {
