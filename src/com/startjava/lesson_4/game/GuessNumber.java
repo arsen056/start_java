@@ -1,10 +1,11 @@
-package com.startjava.lesson2_3.game;
+package com.startjava.lesson_4.game;
+
 import java.util.Scanner;
 
 class GuessNumber {	
 	private Player pl1;
 	private Player pl2;
-	
+
 	GuessNumber(Player pl1, Player pl2) {
 		this.pl1 = pl1;
 		this.pl2 = pl2;

@@ -1,12 +1,11 @@
-package com.startjava.lesson2_3.calculator;
+package com.startjava.lesson_4.calculator;
 
 import java.util.Scanner;
 
 class CalculatorTest {
 	public static void main(String[] args) {
 		String next, mathExpression;
-		boolean isContinue;
-		Scanner scanner = new Scanner (System.in);
+		Scanner scanner = new Scanner(System.in);
 		Calculator calc = new Calculator();
 		
 		do {
@@ -22,17 +21,14 @@ class CalculatorTest {
 				switch (next) {
 					case "нет":
 						System.out.println("игра закончена");
-						isContinue = false;									
 						break;
 					case "да":
 						System.out.println("введите число");
-						isContinue = false;
 						break;
 					default:							
 						System.out.println("Введите ответ еще раз");
-						isContinue = true;															
 				}
-			} while (isContinue);	
+			} while (!next.equals("да") && !next.equals("нет"));
 		} while (next.equals("да"));
 	}
 }

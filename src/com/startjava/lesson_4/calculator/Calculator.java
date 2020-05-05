@@ -1,15 +1,14 @@
-package com.startjava.lesson2_3.calculator;
+package com.startjava.lesson_4.calculator;
 
 class Calculator {
 
 	public void сalculate(String mathExpression) {
-        String [] mathArray = mathExpression.split(" ");
-        int firstNum, secondNum;
-        char mathOperation;
-		firstNum = Integer.parseInt(mathArray [0]);
-		secondNum = Integer.parseInt(mathArray [2]);
+		String [] splitMathExpression = mathExpression.split(" ");
+		int firstNum, secondNum;
+		firstNum = Integer.parseInt(splitMathExpression [0]);
+		secondNum = Integer.parseInt(splitMathExpression [2]);
 
-		switch (mathArray[1]) {
+		switch (splitMathExpression[1]) {
 			case "-":
 				System.out.println("Ответ: " + Math.subtractExact(firstNum, secondNum));
 				break;
@@ -29,5 +28,5 @@ class Calculator {
 				System.out.println(Math.pow(firstNum, secondNum));
 				break;
 		}	
-	}	
+	}
 }

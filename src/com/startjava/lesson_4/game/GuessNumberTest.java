@@ -1,5 +1,5 @@
-package com.startjava.lesson2_3.game;
-import java.util.Arrays;
+package com.startjava.lesson_4.game;
+
 import java.util.Scanner;
 
 class GuessNumberTest {
@@ -14,7 +14,7 @@ class GuessNumberTest {
 			Player player1 = new Player(scanner.nextLine());
 			player1.fill(0);
 
-			System.out.println("Введите имя второго пользователя");				
+			System.out.println("Введите имя второго пользователя");
 			Player player2 = new Player(scanner.nextLine());
 			player2.fill(0);
 

@@ -1,4 +1,4 @@
-package com.startjava.lesson2_3.game;
+package com.startjava.lesson_4.game;
 import java.util.Arrays;
 
 class Player {
