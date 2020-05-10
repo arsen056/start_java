@@ -19,53 +19,32 @@ class GuessNumber {
 
 		for (int i = 0; i < 10; i++) {
 			System.out.println(pl1.getName() + " введите число");
-			pl1.setNumber(scanner.nextInt());
-			playerNum1 = pl1.getNumber();
-			if (playerNum1 > randNum) {
-				System.out.println("Ваше число больше загаданного числа");
-				pl1.setNumberPlayer(i, playerNum1);
-				pl1.setAttempt(i + 1);
-			} else if (playerNum1 < randNum) {
-				System.out.println("Ваше число меньше загаданного числа");
-				pl1.setNumberPlayer(i, playerNum1);
-				pl1.setAttempt(i + 1);
-			} else if (playerNum1 == randNum) {
-				pl1.setAttempt(i + 1);
-				System.out.println(pl1.getName() + " угадал число c " + pl1.getAttempt() + " ой попытки");
-				pl1.setNumberPlayer(i, playerNum1);
+			playerNum1 = scanner.nextInt();
+			pl1.inputNumbers(playerNum1, randNum, i);
+			if (playerNum1 == randNum) {
 				break;
 			}
+
 			if (i == 9) {
 				System.out.println(pl1.getName() + " Вы не угадали число у вас закончились попытки");
 			}
+
 			System.out.println(pl2.getName() + " введите число");
-			pl2.setNumber(scanner.nextInt());
-			playerNum2 = pl2.getNumber();
-			if (playerNum2 > randNum) {
-				System.out.println("Ваше число больше загаданного числа");
-				pl2.setNumberPlayer(i, playerNum2);
-				pl2.setAttempt(i + 1);
-			} else if (playerNum2 < randNum) {
-				System.out.println("Ваше число меньше загаданного числа");
-				pl2.setNumberPlayer(i, playerNum2);
-				pl2.setAttempt(i + 1);
-			} else if (playerNum2 == randNum) {
-				pl2.setAttempt(i + 1);
-				System.out.println(pl2.getName() + " угадал число c " + pl2.getAttempt() + " ой попытки");
-				pl2.setNumberPlayer(i, playerNum2);
+			playerNum2 = scanner.nextInt();
+			pl2.inputNumbers(playerNum2, randNum, i);
+			if (playerNum2 == randNum) {
 				break;
 			}
+
 			if (i == 9) {
 				System.out.println(pl2.getName() + " Вы не угадали число у вас закончились попытки");
 			}
 		}
 		System.out.print(pl1.getName() + " Ваши числа ");
-		for (int i = 0; i < pl1.getNumberPlayerCopy().length; i++) {
-			System.out.print(pl1.getNumberPlayerCopy()[i] + " ");
-		}
+		pl1.outputNumbers();
+		pl1.fill(0);
 		System.out.print("\n" + pl2.getName() + " Ваши числа ");
-		for (int i = 0; i < pl2.getNumberPlayerCopy().length; i++) {
-			System.out.print(pl2.getNumberPlayerCopy()[i] + " ");
-		}
+		pl2.outputNumbers();
+		pl2.fill(0);
 	}
 }
