@@ -11,17 +11,13 @@ class GuessNumber {
 		this.pl2 = pl2;
 	}
 
+	Scanner scanner = new Scanner(System.in);
 	public void guessNumber() {				
 		int randNum = (int) (Math.random() * 101);
 		System.out.println("игра началась! загаданное число " + randNum);
-		int playerNum1, playerNum2;		
-		Scanner scanner = new Scanner(System.in);
-
 		for (int i = 0; i < 10; i++) {
-			System.out.println(pl1.getName() + " введите число");
-			playerNum1 = scanner.nextInt();
-			checkNumber(pl1, playerNum1, randNum, i);
-			if (playerNum1 == randNum) {
+			inputNumber(pl1);
+			if (checkNumber(pl1, pl1.getEnteredNums()[i], randNum) == true) {
 				break;
 			}
 
@@ -29,10 +25,8 @@ class GuessNumber {
 				System.out.println(pl1.getName() + " Вы не угадали число у вас закончились попытки");
 			}
 
-			System.out.println(pl2.getName() + " введите число");
-			playerNum2 = scanner.nextInt();
-			checkNumber(pl2, playerNum2, randNum, i);
-			if (playerNum2 == randNum) {
+			inputNumber(pl2);
+			if (checkNumber(pl2, pl2.getEnteredNums()[i], randNum) == true) {
 				break;
 			}
 
@@ -40,30 +34,36 @@ class GuessNumber {
 				System.out.println(pl2.getName() + " Вы не угадали число у вас закончились попытки");
 			}
 		}
-		System.out.print(pl1.getName() + " Ваши числа ");
 		outputNumbers(pl1);
-		pl1.fill(pl1.getAttempt());
-		System.out.print("\n" + pl2.getName() + " Ваши числа ");
+		pl1.fill();
 		outputNumbers(pl2);
-		pl2.fill(pl2.getAttempt());
+		pl2.fill();
 	}
 
-	public void checkNumber(Player pl, int number, int randNum, int forAttempt) {
+	public void inputNumber(Player pl) {
+		System.out.println(pl.getName() + " введите число");
+		int number = scanner.nextInt();
+		pl.setEnteredNum(pl.getAttempt(), number);
+	}
+
+	public boolean checkNumber(Player pl, int number, int randNum) {
 		if (number > randNum) {
 			System.out.println("Ваше число больше загаданного числа");
-			pl.setEnteredNum(forAttempt, number);
+			return false;
 		} else if (number < randNum) {
 			System.out.println("Ваше число меньше загаданного числа");
-			pl.setEnteredNum(forAttempt, number);
-		} else if (number == randNum) {
-			System.out.println(pl.getName() + " Вы угадали число c " + (pl.getAttempt() + 1) + " попытки");
-			pl.setEnteredNum(forAttempt, number);
+			return false;
+		} else {
+			System.out.println(pl.getName() + " Вы угадали число c " + pl.getAttempt() + " попытки");
+			return true;
 		}
 	}
 
 	public void outputNumbers(Player pl) {
-		for (int i:pl.getEnteredNum()) {
-			System.out.print(i + " ");
+		System.out.print(pl.getName() + " Ваши числа ");
+		for (int num:pl.getEnteredNums()) {
+			System.out.print(num + " ");
 		}
+		System.out.println();
 	}
 }

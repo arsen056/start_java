@@ -19,7 +19,7 @@ class Player {
 		return attempt;
 	}
 
-	public int[] getEnteredNum() {
+	public int[] getEnteredNums() {
 		return Arrays.copyOf(enteredNums, attempt);
 	}
 
@@ -28,7 +28,7 @@ class Player {
 		attempt++;
 	}
 
-	public void fill(int number) {
-		Arrays.fill(enteredNums, number);
+	public void fill() {
+		Arrays.fill(enteredNums, attempt);
 	}
 }
