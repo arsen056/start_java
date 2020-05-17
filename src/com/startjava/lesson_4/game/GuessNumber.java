@@ -40,27 +40,27 @@ class GuessNumber {
 		pl2.fill();
 	}
 
-	public void inputNumber(Player pl) {
+	private void inputNumber(Player pl) {
 		System.out.println(pl.getName() + " введите число");
 		int number = scanner.nextInt();
 		pl.setEnteredNum(pl.getAttempt(), number);
 	}
 
-	public boolean checkNumber(Player pl, int randNum) {
+	private boolean checkNumber(Player pl, int randNum) {
 		if (pl.getEnteredNums()[pl.getAttempt() - 1] != randNum) {
-			if (pl.getEnteredNums()[pl.getAttempt() - 1] < randNum)
+			if (pl.getEnteredNums()[pl.getAttempt() - 1] < randNum) {
 				System.out.println("Ваше число меньше загаданного числа");
-			else {
+			} else {
 				System.out.println("Ваше число больше загаданного числа");
 			} return false;
 		}
-		else {
+		{
 			System.out.println(pl.getName() + " Вы угадали число c " + pl.getAttempt() + " попытки");
 			return true;
 		}
 	}
 
-	public void outputNumbers(Player pl) {
+	private void outputNumbers(Player pl) {
 		System.out.print(pl.getName() + " Ваши числа ");
 		for (int num :	pl.getEnteredNums()) {
 			System.out.print(num + " ");
